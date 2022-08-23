@@ -34,8 +34,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-#navbar .navbar-container .logo {
+#navbar .navbar-container .logo a{
+  color: #eee;
+  text-decoration: none;
   font-size: 1.7rem;
+  transition: .3s ease;
+}
+#navbar .navbar-container .logo a:hover{
+  color: rgb(213, 114, 114);
 }
 #navbar .navbar-container .menu ul {
   display: flex;
@@ -49,6 +55,10 @@ body {
 #navbar .navbar-container .menu ul a {
   color: inherit;
   text-decoration: none;
+  transition: .3s ease;
+}
+#navbar .navbar-container .menu ul a:hover{
+  color: rgb(213, 114, 114);
 }
 
 #showcase {
