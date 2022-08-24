@@ -3,9 +3,9 @@
 
 // Variáveis
 
-$primary-color: "#eee";
-$second-color: "#333";
-$third-color: "#111";
+// $primary-color: "#eee";
+// $second-color: "#333";
+// $third-color: "#111";
 
 
 * {
@@ -30,10 +30,10 @@ body {
     position: fixed;
     width: 100%;
     height: auto;
-    background-color: $third-color;
+    background-color: #111;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 0.625rem;
     opacity: 85%;
 
     .navbar-container {
@@ -42,10 +42,11 @@ body {
         display: flex;
         color: #eee;
         justify-content: space-between;
-        align-items: center;
-
+        align-items: center;    
         .logo {
             a {
+                color: #eee;
+                text-decoration: none;
                 font-size: 1.7rem;
             }
         }
@@ -57,7 +58,7 @@ body {
                 text-transform: uppercase;
                 font-size: 1.2rem;
                 list-style: none;
-                padding: 10px;
+                padding: 0.625rem;
 
                 a {
                     color: inherit;
@@ -75,7 +76,7 @@ body {
 #showcase {
     width: 100%;
     height: 100vh;
-    background: url(img/showcase.jpg) no-repeat center center/cover;
+    background: url(/img/showcase.jpg) no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,11 +101,11 @@ body {
     .btn-showcase {
         opacity: 80%;
         width: 200px;
-        background-color: $third-color;
+        background-color: #111;
         color: #eee;
         text-transform: uppercase;
-        padding: 10px;
-        margin: 10px;
+        padding: 0.625rem;
+        margin: 0.625rem;
         cursor: pointer;
     }
 }
@@ -120,11 +121,12 @@ body {
     padding: 2rem;
 
     h2 {
+        color: #333;
         margin: 30px;
     }
 
     .clients-container {
-        margin: 20px auto;
+        margin: 1.25rem auto;
         width: 80%;
         height: 100%;
         display: grid;
@@ -142,7 +144,7 @@ body {
 // O que fazemos
 #features {
     width: 100%;
-    background-color: $third-color;
+    background-color: #111;
     padding: 2rem;
 
     h2 {
@@ -157,8 +159,8 @@ body {
         width: 80%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 20px;
-        margin: 20px auto;
+        column-gap: 1.25rem;
+        margin: 1.25rem auto;
     }
 
     .features-items {
@@ -166,10 +168,10 @@ body {
         border-radius: 6px;
         background-color: #333;
         color: #eee;
-        padding: 20px;
+        padding: 1.25rem;
         flex-direction: column;
-        margin: 10px 0;
-        gap: 10px;
+        margin: 0.625rem 0;
+        gap: 0.625rem;
     }
 
     span {
@@ -200,7 +202,7 @@ body {
 
     .product-items {
         width: 40%;
-        padding: 10px;
+        padding: 0.625rem;
     }
 
     .item {
@@ -209,7 +211,7 @@ body {
         padding: 1rem;
 
         p {
-            margin: 0 10px;
+            margin: 0 0.625rem;
         }
     }
 }
@@ -217,7 +219,7 @@ body {
 // O que acham de nós
 #testimonials {
     width: 100%;
-    background-color: $third-color;
+    background-color: #111;
     padding: 2rem;
 
     h2 {
@@ -245,7 +247,7 @@ body {
         }
 
         .item-1 {
-            padding: 10px;
+            padding: 0.625rem;
             background-color: #333;
             display: flex;
             align-items: center;
@@ -269,6 +271,7 @@ body {
     padding: 2rem;
 
     h2 {
+        color: #111;
         text-align: center;
         text-transform: uppercase;
         margin: 2rem 0;
@@ -283,14 +286,11 @@ body {
 
     img {
         display: inline-block;
-        width: 400px;
-        height: 300px;
+        width: 25rem;
+        height: 18.75rem;
         border-radius: 6px;
         transition: .3s ease;
-    }
-
-    img:hover {
-        transform: scale(1.03);
+        
     }
 }
 
@@ -298,8 +298,484 @@ body {
 #footer {
     opacity: 85%;
     width: 100%;
-    background-color: $third-color;
+    background-color: #111;
     color: #eee;
     text-align: center;
     padding: 2rem;
+}
+
+// Media query resolução 2560px
+@media screen and (max-width: 2561px) {
+
+    #navbar {
+        .navbar-container {
+            margin: 0.625rem;
+
+            .logo {
+                a {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        .menu {
+            ul {
+                li {
+                    a {
+                        font-size: 2rem;
+                        padding: 1.2rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    #showcase {
+        .showcase-container {
+            h2 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+
+            .btn-showcase {
+                width: 15.625rem;
+                height: 4.375rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #clients {
+        .clients-container {
+            width: 70%;
+        }
+    }
+
+    #features {
+        .features-items {
+            font-size: 1.5rem;
+        }
+    }
+
+    #product {
+        .product-container {
+            img {
+                width: 400px;
+            }
+
+            .item {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #testimonials {
+        .testimonials-content {
+            .item-1 {
+                img {
+                    width: 200px;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    #gallery {
+        .gallery-container {
+            img {
+                width: 25rem;
+                height: 18.75rem;
+            }
+        }
+    }
+
+    #footer {
+        font-size: 1.7rem;
+    }
+}
+
+// Media query resolução 2560px
+@media screen and (max-width: 1921px) {
+
+    #navbar {
+        .navbar-container {
+            height: 3.125rem;
+
+            .logo {
+                a {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .menu {
+            ul {
+                li {
+                    a {
+                        font-size: 1.2rem;
+                        padding: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    #showcase {
+        .showcase-container {
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .btn-showcase {
+                width: 11.25rem;
+                height: 3.125rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    #clients {
+        padding: 100px;
+
+        .clients-container {
+            width: 90%;
+        }
+    }
+
+    #features {
+        .features-items {
+            font-size: 1.2rem;
+        }
+    }
+
+    #product {
+        .product-container {
+            img {
+                width: 300px;
+            }
+
+            .item {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    #testimonials {
+        .testimonials-content {
+            .item-1 {
+                img {
+                    width: 150px;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    #gallery {
+        padding: 100px;
+
+        .gallery-container {
+            img {
+                width: 21.875rem;
+                height: 15.625rem;
+            }
+        }
+    }
+
+    #footer {
+        font-size: 1.2rem;
+    }
+}
+
+// Media query resolução 1440px
+@media screen and (max-width: 1441px) {
+    #gallery {
+        .gallery-container {
+            img {
+                width: 18.75rem;
+                height: 12.5rem;
+            }
+        }
+    }
+}
+
+// Media query resolução 1120px
+@media screen and (max-width: 1120px) {
+    #product {
+        .product-container {
+            width: 100%;
+            height: 50rem;
+
+            .product-items {
+                height: 50rem;
+                width: 31.25rem;
+                margin-top: 6.25rem;
+
+                .item {
+                    width: 31.25rem;
+
+                    i {
+                        font-size: 3rem;
+                    }
+
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    #gallery {
+        .gallery-container {
+            grid-template-columns: repeat(2, 1fr);
+
+            img {
+                width: 18.75rem;
+                height: 12.5rem;
+            }
+        }
+    }
+}
+
+// Media query resolução 768
+@media screen and (max-width: 769px) {
+
+    #navbar {
+        height: 12.5rem;
+        position: absolute;
+        width: 100%;
+        .navbar-container {
+            flex-direction: column;
+            .menu {
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+
+                    li:nth-child(2) {
+                        border-top: 2px solid #333;
+                        border-bottom: 2px solid #333;
+                    }
+                }
+            }
+        }
+
+        .product-container {
+            width: 18.75rem;
+            flex-direction: column;
+
+            img {
+                margin-left: 200px;
+                width: 60%;
+                height: auto;
+            }
+
+            .product-items {
+                width: 25rem;
+
+                .item {
+                    flex-direction: row;
+                    font-size: .8rem;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+
+    #showcase{
+        width: 100%;
+        .showcase-container{
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+            .btn-showcase{
+                font-size: .8rem;
+            }
+        }
+    }
+
+    #clients {
+        width: 100%;
+        .clients-container {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+            img {
+                width: 4.375rem;
+            }
+        }
+    }
+
+    #features{
+        width: 100%;
+        .features-container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    #product{
+        width: 100%;
+        .product-container{
+            flex-direction: column;
+
+        .product-items{
+            margin: 0;
+        }
+
+        .item {
+            margin: 30px 0;
+            padding: 0;
+        }
+        
+        img{
+            width: 12.5rem;
+        }    
+        }
+    }
+
+    #testimonials{
+        width: 100%;
+        .testimonials-content{
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    #gallery {
+        width: 100%;
+        margin: 0;
+        .gallery-container {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+            img {
+                width: 22.4375rem;
+                height: 15.625rem;
+            }
+        }
+    }
+
+    #footer{
+        width: 100%;
+    }
+}
+
+// Media query resolução 425 a 550
+@media screen and (min-width: 426px) and (max-width: 551px) {
+    body, html{
+        overflow-x: hidden;
+    }
+
+    #showcase{
+
+        .showcase-container{
+            h2{
+                font-size: 1.6rem;
+            }
+            p{
+                font-size: .9rem;
+            }
+        }
+        
+    }
+
+    #clients{
+        width: 100%;
+        .clients-container{
+            gap: 1.5rem; 
+            img{
+                width: 6rem;
+             }
+        }
+    }
+
+    #product{
+        .product-container{
+            .product-items{
+                width: 90vw;
+                height: 31.25rem;
+                .item{
+                    flex-direction: row;
+                    p{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    #testimonials{
+        .testimonials-content{
+            width: 100%;
+        }
+    }
+
+    #gallery{
+        width: 100%;
+        .gallery-container{
+            img{
+                width: 16rem;
+            }
+        }
+        
+    }
+}
+
+
+// Media query resolução 320 a 375
+@media screen and (min-width: 319px) and (max-width: 376px) {
+    body, html{
+        overflow-x: hidden;
+    }
+    #product{
+        .product-items{
+            width: 70%;
+            .item{
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+                p{
+                    width: 10rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #testimonials{
+        .testimonials-content{
+            .item-1{
+                flex-direction: column;
+            }
+        }
+    }
+
+    #gallery{
+        width: 100%;
+        padding: 0;
+        .gallery-container{
+            margin-bottom: 1rem;
+            width: 100%;
+            img{
+                padding: 0;
+                width: 13rem;
+                height: 10rem;
+            }
+        }
+    }
 }
