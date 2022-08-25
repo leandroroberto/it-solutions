@@ -57,7 +57,7 @@ body {
 #showcase {
   width: 100%;
   height: 100vh;
-  background: url(./img/showcase.jpg) no-repeat center center/cover;
+  background: url(/img/showcase.jpg) no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,6 +83,18 @@ body {
   padding: 0.625rem;
   margin: 0.625rem;
   cursor: pointer;
+}
+#showcase .whatsapp-icon a {
+  color: #128c7e;
+  font-size: 5rem;
+  position: fixed;
+  right: 2rem;
+  bottom: 9rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+#showcase .whatsapp-icon a:hover {
+  transform: scale(1.1);
 }
 
 #clients {
@@ -240,13 +252,32 @@ body {
   transition: 0.3s ease;
 }
 
-#footer {
+#footer .footer-container {
+  display: flex;
+  flex-direction: row;
   opacity: 85%;
   width: 100%;
+  height: 8rem;
   background-color: #111;
   color: #eee;
   text-align: center;
+  justify-content: center;
   padding: 2rem;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+#footer .footer-container .social-media {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 2rem;
+}
+#footer .footer-container .social-media i {
+  padding: 0 1rem;
+  color: #eee;
+  transition: 0.3s ease;
+}
+#footer .footer-container .social-media i:hover {
+  transform: translateY(-0.6rem);
 }
 
 @media screen and (max-width: 2561px) {
@@ -365,7 +396,7 @@ body {
   #product .product-container .product-items {
     height: 50rem;
     width: 31.25rem;
-    margin-top: 6.25rem;
+    margin-top: 20.25rem;
   }
   #product .product-container .product-items .item {
     width: 31.25rem;
@@ -380,6 +411,16 @@ body {
   #gallery .gallery-container img {
     width: 18.75rem;
     height: 12.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  #footer .footer-container {
+    height: 12rem;
+    flex-direction: column;
+  }
+  #footer .footer-container .social-media {
+    right: auto;
+    position: relative;
   }
 }
 @media screen and (max-width: 769px) {
@@ -429,15 +470,23 @@ body {
   #showcase .showcase-container .btn-showcase {
     font-size: 0.8rem;
   }
+  #showcase .whatsapp-icon {
+    display: none;
+  }
   #clients {
     width: 100%;
+    padding: 2rem 0;
+  }
+  #clients h2 {
+    padding: 2rem;
+    margin: 1rem;
   }
   #clients .clients-container {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
   }
   #clients .clients-container img {
-    width: 4.375rem;
+    width: 8rem;
   }
   #features {
     width: 100%;
@@ -484,8 +533,53 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 551px) {
-  body, html {
+@media screen and (min-width: 320px) and (max-width: 460px) {
+  #footer .footer-container {
+    height: 12rem;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 319px) and (max-width: 394px) {
+  body,
+html {
+    overflow-x: hidden;
+  }
+  #product h2 {
+    margin-bottom: 4rem;
+  }
+  #product .product-items {
+    width: 70%;
+  }
+  #product .product-items .item {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  #product .product-items .item p {
+    width: 10rem;
+    font-size: 1rem;
+  }
+  #testimonials .testimonials-content .item-1 {
+    flex-direction: column;
+  }
+  #gallery {
+    width: 100%;
+    padding: 0;
+  }
+  #gallery .gallery-container {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  #gallery .gallery-container img {
+    padding: 0;
+    width: 13rem;
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 412px) and (max-width: 551px) {
+  body,
+html {
     overflow-x: hidden;
   }
   #showcase .showcase-container h2 {
@@ -521,39 +615,6 @@ body {
   }
   #gallery .gallery-container img {
     width: 16rem;
-  }
-}
-@media screen and (min-width: 319px) and (max-width: 376px) {
-  body, html {
-    overflow-x: hidden;
-  }
-  #product .product-items {
-    width: 70%;
-  }
-  #product .product-items .item {
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-  }
-  #product .product-items .item p {
-    width: 10rem;
-    font-size: 1rem;
-  }
-  #testimonials .testimonials-content .item-1 {
-    flex-direction: column;
-  }
-  #gallery {
-    width: 100%;
-    padding: 0;
-  }
-  #gallery .gallery-container {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  #gallery .gallery-container img {
-    padding: 0;
-    width: 13rem;
-    height: 10rem;
   }
 }
 
